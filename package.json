@@ -5,7 +5,6 @@
     "types": "./lib/cjs/types/index.d.ts",
     "main": "./lib/cjs/index.js",
     "scripts": {
-        "test": "NODE_OPTIONS=\"--loader ts-node/esm\" mocha",
         "clean": "rm -rf ./lib",
         "build": "npm run clean && npm run build:esm && npm run build:cjs",
         "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
