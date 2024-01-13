@@ -14,7 +14,7 @@ import ifnot from "if-not";
 ifnot(false, console.log, "Hello world!", "second argument!");
 ifnot(true, console.log, "this won't be executed!");
 
-// without if-not, look at all the bangs! all the indentation! this is unacceptable!
+// without if-not: look at all the bangs! all the indentation! this is unacceptable!
 if(!false) {
 	console.log("Hello world!", "second argument!");
 }
@@ -26,5 +26,4 @@ output for both:
 ```
 $ node .
 Hello world! second argument!
-$
 ```
