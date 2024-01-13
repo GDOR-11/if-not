@@ -1,0 +1,53 @@
+{
+    "name": "@GDOR-11/if-not",
+    "version": "1.0.0",
+    "description": "a package that helps you to check if a condition is false without excessive use of !",
+    "types": "./lib/cjs/types/index.d.ts",
+    "main": "./lib/cjs/index.js",
+    "scripts": {
+        "test": "NODE_OPTIONS=\"--loader ts-node/esm\" mocha",
+        "clean": "rm -rf ./lib",
+        "build": "npm run clean && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+        "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+        "prepack": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gdor-11/if-not.git"
+    },
+    "keywords": [
+        "typescript",
+        "javascript",
+        "nodejs",
+        "if",
+        "not"
+    ],
+    "author": "GDOR-11",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/gdor-11/if-not/issues"
+    },
+    "homepage": "https://github.com/gdor-11/if-not#readme",
+    "files": [
+        "lib/**/*"
+    ],
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./lib/esm/types/index.d.ts",
+                "default": "./lib/esm/index.mjs"
+            },
+            "require": {
+                "types": "./lib/cjs/types/index.d.ts",
+                "default": "./lib/cjs/index.js"
+            }
+        }
+    },
+    "dependencies": {
+        "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.2"
+    }
+}
