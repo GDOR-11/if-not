@@ -1,5 +1,5 @@
 {
-    "name": "@GDOR-11/if-not",
+    "name": "if-not",
     "version": "1.0.0",
     "description": "a package that helps you to check if a condition is false without excessive use of !",
     "types": "./lib/cjs/types/index.d.ts",
