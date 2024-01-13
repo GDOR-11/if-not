@@ -1,6 +1,6 @@
 {
     "name": "if-not",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "a package that helps you to check if a condition is false without excessive use of !",
     "types": "./lib/cjs/types/index.d.ts",
     "main": "./lib/cjs/index.js",
